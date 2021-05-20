@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.card {
+  padding: 10px;
+}
+
+.input-invalid > input {
+  border-color: red;
+}
+
+.input-invalid > div {
+     color: red;
+  }
+
+.input-invalid > label {
+  color: red;
+}
+
+.input-valid > input {
+  border-color: green;
+}
+
+.input-valid > div {
+    color: green;
+  }
+
+.input-valid > label {
+  color: green;
+}
