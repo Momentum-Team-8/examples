@@ -40,14 +40,15 @@ selectFrom.addEventListener("change", function(event) {
 });
 
 function convert(target, amount) {
+    console.log(target)
   let exchangeRate = rates.rates[target];
   console.log("Exchange rate is ", exchangeRate);
-  return (amount * exchangeRate).toFixed(2);
+  return (amount * exchangeRate).toFixed(3);
 }
 
 convertButton.addEventListener("click", function(e) {
   let targetCurrency = document.querySelector("#currency-to").value;
   let amount = parseInt(document.querySelector("#currency-amount").value);
   let result = convert(targetCurrency, amount);
-  resultDiv.innerText = `${amount} ${currencyFrom} is ${result} ${targetCurrency}`;
+  resultDiv.innerText = '${amount} ${currencyFrom} is ${result} ${targetCurrency}';
 });
